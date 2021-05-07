@@ -18,7 +18,7 @@ An easily configurable Docker image for running an Electrum server.
 docker run \
   -v /home/username/electrumx:/data \
   -e DAEMON_URL=http://user:pass@host:port \
-  -e COIN=BitcoinSegwit \
+  -e COIN=Ravencoin \
   -p 50002:50002 \
   lukechilds/electrumx
 ```
