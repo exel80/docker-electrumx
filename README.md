@@ -44,6 +44,7 @@ If you're only accessing RPC from within the container, there's no need to expos
 ### Version
 
 You can also run a specific version of ElectrumX if you want.
+
 NOTE: lukechilds/electrumx container does not support Ravencoin!
 
 ```
