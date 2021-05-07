@@ -7,10 +7,11 @@ COPY ./VERSION /tmp
 RUN VERSION=$(cat /tmp/VERSION) && \
     chmod a+x /usr/local/bin/* && \
     apk add --no-cache git build-base openssl && \
+    apk add --no-cache libffi6 libffi-dev && \
     apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.11/main leveldb-dev && \
     apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing rocksdb-dev && \
     pip install --upgrade pip && \
-    pip install aiohttp x16r_hash aiorpcx x16rv2_hash kawpow pylru plyvel websockets python-rocksdb && \
+    pip install aiohttp x16r_hash aiorpcx x16rv2_hash pylru plyvel websockets python-rocksdb kawpow && \
     git clone -b $VERSION https://github.com/spesmilo/electrumx.git && \
     cd electrumx && \
     python setup.py install && \
