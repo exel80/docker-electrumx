@@ -6,7 +6,7 @@ COPY ./VERSION /tmp
 
 RUN VERSION=$(cat /tmp/VERSION) && \
     chmod a+x /usr/local/bin/* && \
-    apk add --no-cache git build-base openssl libffi-dev && \
+    apk add --no-cache git build-base openssl cmake gcc libffi-dev && \
     apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.11/main leveldb-dev && \
     apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing rocksdb-dev && \
     pip install --upgrade pip && \
