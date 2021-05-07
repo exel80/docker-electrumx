@@ -20,7 +20,7 @@ docker run \
   -e DAEMON_URL=http://user:pass@host:port \
   -e COIN=Ravencoin \
   -p 50002:50002 \
-  lukechilds/electrumx
+  exel80/docker-electrumx-ravencoin
 ```
 
 If there's an SSL certificate/key (`electrumx.crt`/`electrumx.key`) in the `/data` volume it'll be used. If not, one will be generated for you.
@@ -44,6 +44,7 @@ If you're only accessing RPC from within the container, there's no need to expos
 ### Version
 
 You can also run a specific version of ElectrumX if you want.
+NOTE: lukechilds/electrumx container does not support Ravencoin!
 
 ```
 docker run \
